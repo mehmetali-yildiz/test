@@ -18,9 +18,6 @@ def get_system_info():
 
 
 def send_msg(sock, data_dict):
-    """It converts the Python dictionary to JSON, encodes it as UTF-8, and adds a
-    4-byte length information (Big-Endian integer)to the beginning before sending it.
-    """
 
     json_bytes = json.dumps(data_dict).encode('utf-8')
     # '>I' -> Big-endian 4-byte unsigned integer
